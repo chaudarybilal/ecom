@@ -9,6 +9,7 @@ import Cart from "./Cart";
 import ErrorPage from "./ErrorPage";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
+import Header from "./components/Header";
 
 const App = () => {
   const theme = {
@@ -31,13 +32,14 @@ const App = () => {
     },
     media: {
       mobile: "768px",
-      tab: "998px", 
+      tab: "998px",
     },
   };
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <GlobalStyle />
+        <Header />
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/about" Component={About} />
